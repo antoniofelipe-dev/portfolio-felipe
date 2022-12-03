@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --blackcolor:rgb(18, 17, 17);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(18, 17, 17);
+    padding-inline: 4rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.container-header {
+    display: flex;
+    margin-bottom: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-header a {
+    position: relative;
+    text-decoration: none;
+    margin: 20px ;
+    color: white;
+}
+
+.container-header a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.container-header a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.container-main {
+    display: flex;
+    width: 100%;
+}
+
+.container-text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-left: 4rem;
+    flex-direction: column;
+}
+
+.container-text h2{
+    font-size: 4rem;
+    line-height: 70px;
+}
+
+.container-text p{
+    text-align: justify;
+    /* padding: 10px;
+    width: 80%; */
+}
+
+.container-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-img img {
+    width: 300px;
+}
+
+/* INDEX ABOUT */
+
+.about {
+    display: flex;
+    
+}
+
+.about .about-me {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 4rem;
+}
+
+.about .about-me h2 {
+    line-height: 100%;
+    font-size: 3rem;
+}
+
+.about .about-me p {
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+.about .myself {
+    justify-content: right;
+    display: flex;
+    width: 50%;
+}
+
+.about .myself img {
+    height: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color:var(--blackcolor);
+    margin-left:2rem;
+    
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Style the container */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (min-width: 1100px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    .about{
+        display:flex;
+        gap:50px;
+
+    }
+  }
