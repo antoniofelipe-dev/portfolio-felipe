@@ -1,5 +1,5 @@
 function typeWrite(elemento) {
-    const textoArray = elemento.innerHTML.split('');
+    let textoArray = elemento.innerHTML.split('');
     elemento.innerHTML = ' ';
     textoArray.forEach((letter, index)=> {
         setTimeout(function () {
@@ -8,6 +8,9 @@ function typeWrite(elemento) {
 
     });
 }
-const titleIndex = document.querySelector('.index-title');
+
+const titleIndex = document.querySelector('.letter-animation');
+
 typeWrite(titleIndex);
+
 
